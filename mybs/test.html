@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!--<script>
+		function  click(){
+			
+			/*function enable() 
+			{
+				document.getElementById("sl").disabled =false
+			}
+			function disable()
+            {
+                document.getElementById("sl").disabled=true
+            }
+			function check()
+            {
+                document.getElementById("cb").disabled=true
+            }*/
+            
+            if(document.getElementById("cb").disabled=true){
+            	document.getElementById("sl").disabled =false;
+            }else{
+            	document.getElementById("sl").disabled=true;
+            }
+		})
+	</script>-->
+</head>
+	<body>
+		<form>
+		  <input type="checkbox" id="cb" onclick="">AA
+		  <select id="sl" >
+			<option>asd</option>
+			<option>qwe</option>
+			<option>rty</option>
+		  </select>
+		</form>
+		
+		<!--相对定位和绝对定位-->
+		<style>
+			#img{
+				position: relative;
+				background-image: url(img/1.jpg);
+				width: 600px;
+				height: 450px;
+			}
+			#name{
+				position: absolute;
+				color: red;
+				right: 20px;
+				bottom: 20px;
+			}
+		</style>
+		<div id="img">
+			<div id="name">布达拉宫</div>
+		</div>
+	</body>
+</html>

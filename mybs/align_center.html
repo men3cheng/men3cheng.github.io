@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>永远垂直居中</title>
+		<style>
+			.a{
+				background: yellowgreen;
+				position: absolute;
+				height:460px;
+				width: 500px;
+				top:50%;
+				left:50%;
+				overflow: auto;
+				margin:-230px 0 0 -250px;
+			}
+			/*
+			 * top给50%，left给50%；
+			 * marign-top给高的-1/2px;
+			 * marign-left给宽的-1/2px；  
+			 */
+		</style>		
+	</head>
+	<body>
+		<div class="a">垂直居中</div>
+	</body>
+</html>
