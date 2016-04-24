@@ -571,23 +571,366 @@ ul li{
 	border:2px rgba(0,0,0,0.4) solid;
 	background:#fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/****************六小块儿&三张图**************/
+.home_good{
+	height: 170px;
+	margin: 14px  0px 25px 62px;
+}
+/*六小块儿*/
+.home_good_liu{
+	height: 170px;
+	width: 234px;
+	float: left;
+}
+.home_good_liu ul{
+	width: 228px;
+	height: 170px;
+	background-color: #5f5755;
+	padding: 0px 3px;
+}
+.home_good_liu ul li{
+	height: 82px;
+	width: 70px;
+	float: left;
+	padding: 1px 1px 1px 4px;
+}
+.home_good_liu ul li.top,.home_good_liu ul li.spa{
+	border-bottom: 1px solid #E0E0E0;
+}
+.home_good_liu ul li.top,.home_good_liu ul li.bot{
+	border-right: 1px solid #E0E0E0;
+}
+.home_good_liu ul li a{
+	font-size: 12px;
+	display: block;
+	height: 64px;
+	text-align: center;
+	width: 70px;
+	padding-top: 18px;
+	color: rgba(255,255,255,0.7);
+}
+.home_good_liu ul li a:hover{
+	color: #fff;
+}
+.home_good_liu ul li a img{
+	display: block;
+	width: 70px;
+	height: 24px;
+	line-height: 24px;
+	margin-bottom: 2px;
+}
+/*三张图*/
+.home_good_pic{
+	height: 170px;
+	width: 992px;
+	float: left;
+}
+.home_good_pic ul{
+	height: 170px;
+	width: 992px;
+	/*padding: 0px 5px;*/
+}
+.home_good_pic ul li{
+	width: 316px;
+	height: 170px;
+	float: left;
+	margin-left: 14.5px;
+}
+.home_good_pic ul li a{
+	display: block;
+	width: 316px;
+	height: 170px;
+}
+.home_good_pic ul li a img{
+	display: block;
+	width: 316px;
+	height: 170px;
+}
+.home_good_pic ul li.on{
+	box-shadow: 2px 10px 10px #ccc;
+}
+/*小米明星单品*/
+/*top*/
+.star_dp{
+	height: 438px;
+}
+.dp_top{
+	height: 58px;
+	width: 1226px;
+	position: relative;
+}
+.dp_top h2{
+	display: block;
+	height: 58px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 22px;
+}
+.dp_top .dp_top_right{
+	width: 72px;
+	height: 26px;
+	position: absolute;
+	right: 0px;	
+	bottom: 10px;
+}
+.dp_top .dp_top_right a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	float: right;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 1px 5px;
+	border:1px solid #e0e0e0;
+	color:#e0e0e0;
+}
+.dp_top .dp_top_right .cc{
+	border:1px #e0e0e0 solid;
+	color:#b0b0b0;
+	font-weight: bold;
+}
+.dp_top .dp_top_right .cc:hover{
+	color:#ff6700;
+}
+.dp_top .dp_top_right .bb{
+	color:#e0e0e0;
+	border:1px #e0e0e0 solid;
+}
+/*luobo*/
+.dp_lunbo{
+	width: 1226px;
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+}
+.dp_lunbo ul{
+	width: 2452px;
+	height: 340px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+.dp_lunbo ul li{
+	width: 1226px;
+	height: 340px;
+	float: left;
+}
+.dp_lunbo ul li .pic{
+	background-color: #FAFAFA;
+	width: 200px;
+	height: 300px;
+	padding: 39px 17px 0px 17px;
+	float: left;
+	text-align: center;	
+}
+.dp_lunbo ul li .pic.mrg{
+	margin-left:14px;
+}
+.dp_lunbo ul li .pic img{
+	display: block;
+	padding: 0px 20px;
+	width: 160px;
+	height: 160px;
+}
+.dp_lunbo ul li .pic h3{
+	display: block;
+	font-size: 14px;
+	width: 160px;
+	height: 18px;
+	padding: 20px 20px 0px 20px;
+	color: #333;
+	font-weight: 400;
+}
+.dp_lunbo ul li .pic .pres{
+	font-size:12px;
+	color#bobobo;
+	display:block;
+	height:18px;
+	width；160px;
+	padding:0 20px;
+	margin-top: 6px;
+	margin-bottom:14px;
+}
+.dp_lunbo ul li .pic .price{
+	height:21px;
+	line-height:21px;
+	font-size:14px;
+	color:#ff6709;
+}
+/*******************main*****************/
+.main{
+	background-color: #f5f5f5;
+	padding-top: 60px;
+}
+/*智能硬件*/
+.zn{
+	height: 686px;
+	width: 1226px;
+	margin-bottom: 8px;
+}
+.zn_header{
+	height: 58px;
+	width: 1226px;
+	position: relative;
+}
+.zn_header span{
+	display: block;
+	height: 58px;
+	line-height: 58px;
+	font-size: 22px;
+	left: 0px;
+	top: 0px;
+	color: #333;
+	font-weight: 200;
+}
+.zn_header .zn_header_right{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 90px;
+	height: 58px;
+}
+.zn_header .zn_header_right a{
+	display: block;
+	color: #333;
+	height: 20px;
+	font-size: 16px;
+	margin-top: 19px;
+	line-height: 20px;
+}
+.zn_header .zn_header_right a span{
+	display: block;
+	float: right;
+	margin-left: 5px;
+	line-height: 20px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	background-color: #ccc;
+	color: #fff;	
+	border-radius: 50%;
+}
+.zn_body{
+	height: 628px;
+	width: 1226px;
+}
+.zn_body_left{
+	height: 628px;
+	width: 234px;
+	float: left;
+	min-height: 1px;
+}
+.zn_body_left ul li{
+	width:234px;
+	height:614px;
+	margin-bottom: 14px;
+	position: relative;
+	background-color: #fff;
+}
+.zn_body_right{
+	height: 628px;
+	width: 992px;
+	float: left;
+}
+.zn_body_right ul{
+	height: 614px;
+	width: 992px;
+}
+.zn_body_right ul li{
+	float: left;
+	margin-bottom: 14px;
+	margin-left: 14px;
+	padding: 20px 0px;
+	height: 260px;
+	width: 234px;
+	position: relative;
+	background-color: #fff;
+}
+.zn_body_right ul li div{
+	width: 160px;
+	height: 160px;
+	margin:0px 18px;
+}
+.zn_body_right ul li div img{
+	padding: 0px 20px;
+	width: 160px;
+	height: 160px;
+}
+.zn_body_right ul li h3{
+	width: 214px;	
+	margin-top:20px;
+	font-size: 14px;
+	font-weight: 400;
+	padding-left: 11px;
+	text-align: center;
+	color: #333;
+}
+.zn_body_right ul li p{
+	display: block;
+	padding-left: 11px;
+	height: 18px;
+	width: 214px;
+	text-align: center;
+	font-size:12px;
+	color:#b0b0b0;
+	white-space: nowrap;
+	line-height: 18px;
+}
+.zn_body_right ul li span{
+    display:block;
+	height:21px;
+	width:214px;
+	text-align: center;
+	font-size:14px;
+	color:#FF6700;
+	line-height:21px;
+	padding: 10px 0px 10px 11px;
+}
+.zn_body_right ul li span del{
+	color: #b0b0b0;
+}
+.zn_body_right ul li .flag_new{	
+	width: 64px;
+	height: 20px;
+	font-size:14px;
+	text-align: center;
+	background-color: green;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left:-32px;
+}
+.zn_body_right ul li .saleoff{
+	width: 64px;
+	height: 20px;
+	font-size:14px;
+	text-align: center;
+	background-color: red;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left:-32px;
+}
+.zn_body_right ul li .postfree{
+	width: 64px;
+	height: 20px;
+	font-size:14px;
+	text-align: center;
+	background-color: rgb(255,172,19);
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left:-32px;
+}
+.bshadow{
+	box-shadow:rgba(0,0,0,0.1) 0 15px 30px ;
+	transform: translate3d(0,-2px,0);
+}
 
 
 

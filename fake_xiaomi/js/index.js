@@ -112,8 +112,86 @@ $(function(){
 	}
 	change();
 	
-	
+	/*三张图阴影效果*/
+	var hhimg=$('.home_good_pic ul li');
+	hhimg.hover(function(){
+		$(this).addClass('on');
+	},function(){
+		$(this).removeClass('on');
+	})
 
+	/*小米单品滚动*/
+    var dp_lis = $('.dp_lunbo ul');
+	var dpleft = $('.dp_top .dp_top_right .left');
+	var dpright = $('.dp_top .dp_top_right .right');
+	var dpbtn = $('.dp_top .dp_top_right');
+	dpbtn.hover(function(){
+	    clearInterval(timer1);
+    },function(){
+	    timer1=setInterval(change1,3000);
+    })
+	dpleft.click(function(){
+		dp_lis.animate({'left':'0px'},300);
+			aleft();
+   		 })
+	dpright.click(function(){
+		dp_lis.animate({'left':'-1226px'},300);		
+		aright();
+	})
+	var onoff=true;
+	timer1=setInterval(change1,3000);
+	function change1(){
+		if(onoff){
+			dp_lis.animate({'left':'-1226px'},300);
+			onoff=false;
+			aright();
+		}else{
+			dp_lis.animate({'left':'0px'},300);
+			onoff=true;		
+			aleft();
+		}	
+	}
+	function aleft(){
+		dpleft.addClass('bb').removeClass('cc');
+		dpright.addClass('cc').removeClass('bb');
+	}
+	function aright(){
+		dpright.addClass('bb').removeClass('cc');
+		dpleft.addClass('cc').removeClass('bb');
+	}
+
+    /*只能硬件阴影+位移效果*/
+	var zn_leftitems=$('.zn_body_left ul li');
+	zn_leftitems.hover(function(){
+		$(this).addClass('bshadow');
+	},function(){
+		$(this).removeClass('bshadow');
+	})
+    /*共通的函数*/
+	function changeBshadow(obj){
+		obj.hover(function(){
+			$(this).addClass('bshadow');
+//			$(this).find('.review-wrapper').stop().animate({'height':'60px','opacity':'1'}).siblings().find('.review-wrapper').css({'height':'0px','opacity':'0'});
+		},function(){
+			$(this).removeClass('bshadow');
+//			$(this).find('.review-wrapper').stop().animate({'height':'0px','opacity':'0'})
+		})
+	}
+	var zn_rightitems=$('.zn_body_right ul li');
+	changeBshadow(zn_rightitems);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
