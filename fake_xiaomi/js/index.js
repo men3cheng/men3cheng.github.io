@@ -160,7 +160,7 @@ $(function(){
 		dpleft.addClass('cc').removeClass('bb');
 	}
 
-    /*只能硬件阴影+位移效果*/
+    /*智能硬件阴影+位移效果*/
 	var zn_leftitems=$('.zn_body_left ul li');
 	zn_leftitems.hover(function(){
 		$(this).addClass('bshadow');
@@ -171,16 +171,31 @@ $(function(){
 	function changeBshadow(obj){
 		obj.hover(function(){
 			$(this).addClass('bshadow');
-//			$(this).find('.review-wrapper').stop().animate({'height':'60px','opacity':'1'}).siblings().find('.review-wrapper').css({'height':'0px','opacity':'0'});
+			$(this).find('.dapei-review').stop().animate({'height':'60px','opacity':'1'}).siblings().find('.dapei-review').css({'height':'0px','opacity':'0'});
 		},function(){
 			$(this).removeClass('bshadow');
-//			$(this).find('.review-wrapper').stop().animate({'height':'0px','opacity':'0'})
+			$(this).find('.dapei-review').stop().animate({'height':'0px','opacity':'0'})
 		})
 	}
 	var zn_rightitems=$('.zn_body_right ul li');
-	changeBshadow(zn_rightitems);
+	changeBshadow(zn_rightitems);	
+
+	var tab_item1=$('.dapei .dapei_body .dapei_body_left ul li');
+	var tab_item2=$('.dapei .dapei_body .dapei_body_right ul li');
+	changeBshadow(tab_item1);
+	changeBshadow(tab_item2)
 	
+	function change2(obj1,obj2){
+		obj1.mouseover(function(){
+		var index = $(this).index();
+		$(this).addClass('active').siblings().removeClass('active');
+			obj2.eq(index).show().siblings().hide();
+		})
+	}	
 	
+	var smartnav=$('#dapei .dapei_header .dapei_header_right li');
+	var smartlists=$('#dapei .dapei_body .dapei_body_right ul')
+	change2(smartnav,smartlists)
 	
 	
 	
