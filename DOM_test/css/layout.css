@@ -1,0 +1,41 @@
+body{
+	font-family: helvetica arial,sans-serif;
+	background-color: #ccc;	
+}
+.sl_img,.img{
+	margin: 0px 20px;
+}
+.sl_img ul{
+	margin-left: -40px;
+}
+.sl_img ul li{	
+	margin-right:5px ;
+}
+.sl_img ul li a{
+	color: #c6o;
+	text-decoration: none;
+}
+.img{
+	margin-top:-10px;
+}
+#imagegallery li{
+	display: inline;
+}
+#imagegallery li a img{
+	width: 90px;
+	height: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
