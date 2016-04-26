@@ -574,7 +574,8 @@ ul li{
 /****************六小块儿&三张图**************/
 .home_good{
 	height: 170px;
-	margin: 14px  0px 0px 62px;
+	width: 1226px;	
+	margin-top: 14px;
 }
 /*六小块儿*/
 .home_good_liu{
