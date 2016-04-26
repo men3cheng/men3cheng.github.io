@@ -197,8 +197,67 @@ $(function(){
 	var smartlists=$('#dapei .dapei_body .dapei_body_right ul')
 	change2(smartnav,smartlists)
 	
-	
-	
+	/*内容*/
+	var $content_children=$('.content .content-children');
+	changeBshadow($content_children);
+	var $conindex = null;
+	function changemove(obj1,obj2,obj3,obj4,obj5){
+		var $conindex=0;
+		obj1.click(function(){
+			$conindex=$(this).index();
+			$(this).addClass("active").siblings().removeClass('active');
+			obj4.animate({'left':-$conindex*296+'px'});
+		})	
+		obj2.click(function(){
+			if($conindex==0){
+				return;
+			}
+			$conindex--
+			obj1.eq($conindex).addClass("active").siblings().removeClass('active');
+			obj4.animate({'left':-$conindex*296+'px'});
+		})
+		obj3.click(function(){
+			if($conindex==3){
+				return;
+			}
+			$conindex++
+			obj1.eq($conindex).addClass("active").siblings().removeClass('active');
+			obj4.animate({'left':-$conindex*296+'px'});
+		})
+		obj5.hover(function(){
+			$(this).find('a').fadeIn(300);
+		},function(){
+			$(this).find('a').fadeOut(300);
+		})
+	}
+	/*first*/
+	var $contfrlist=$('.content .first .content-list');
+	var $contfrlis=$('.content .first .tab span');
+	var $confrlift=$('.content .first .left');
+	var $confrright=$('.content .first .right')
+	var $confirst=$('.content .first')
+	changemove($contfrlis,$confrlift,$confrright,$contfrlist,$confirst);
+	/*second*/
+	var $contselist=$('.content .second .content-list');
+	var $contselis=$('.content .second .tab span');
+	var $conselift=$('.content .second .left');
+	var $conseright=$('.content .second .right')
+	var $consecond=$('.content .second')
+	changemove($contselis,$conselift,$conseright,$contselist,$consecond);
+	/*third*/
+	var $contthlist=$('.content .third .content-list');
+	var $contthlis=$('.content .third .tab span');
+	var $conthlift=$('.content .third .left');
+	var $conthright=$('.content .third .right')
+	var $conthird=$('.content .third')
+	changemove($contthlis,$conthlift,$conthright,$contthlist,$conthird);
+	/*four*/
+	var $contfolist=$('.content .four .content-list');
+	var $contfolis=$('.content .four .tab span');
+	var $confolift=$('.content .four .left');
+	var $conforight=$('.content .four .right')
+	var $confour=$('.content .four')
+	changemove($contfolis,$confolift,$conforight,$contfolist,$confour);
 	
 	
 	
