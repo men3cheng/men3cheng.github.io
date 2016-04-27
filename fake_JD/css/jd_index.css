@@ -87,17 +87,17 @@ a:hover{
 }
 li.vip a{
 	padding-left: 30px;
-	background: url(Images/vip.jpg) no-repeat left center;
+	background: url(../Images/vip.jpg) no-repeat left center;
 }
 li.dakehu a{
 	padding-left: 30px;
-	background: url(Images/dakehu.jpg) no-repeat left center;
+	background: url(../Images/dakehu.jpg) no-repeat left center;
 }
 li.app_jd a{
 	display: inline-block;
 	height: 26px;
 	padding-left: 20px;
-	background: url(Images/iconlist_2.png) no-repeat -126px -357px;
+	background: url(../Images/iconlist_2.png) no-repeat -126px -357px;
 }
 li.app_jd a:hover{
 	background-position: -126px -397px;
@@ -106,11 +106,11 @@ li.service>a{
 	display: inline-block; 
 	height: 26px;
 	padding:0 15px;
-	background: url(Images/jt_down.jpg) no-repeat right center;
+	background: url(../Images/jt_down.jpg) no-repeat right center;
 	border: 1px solid transparent;
 }
 li.service>a:hover{
-	background: url(Images/jt_up.jpg) no-repeat right center;
+	background: url(../Images/jt_up.jpg) no-repeat right center;
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-bottom: none;
@@ -119,6 +119,7 @@ li.service>a:hover{
 }
 /*top部分，“客户服务的弹出菜单”*/
 #service_items{
+	display: none;
 	position: absolute;
 	border: 1px solid #ddd;
 	border-top: none;
@@ -177,7 +178,7 @@ div.hot_words span,div.hot_words a{
 	height:30px;
 	line-height:30px;
 	background-color:#F7F7F7;
-	background-image:url(Images/iconlist_2.png);
+	background-image:url(../Images/iconlist_2.png);
 	background-position:-116px -24px;
 	background-repeat:no-repeat;
 	padding:0 4px 0 25px;
@@ -203,7 +204,7 @@ div.hot_words span,div.hot_words a{
 	height:30px;
 	line-height:30px;
 	background-color:#F7F7F7;
-	background-image:url(Images/iconlist_2.png);
+	background-image:url(../Images/iconlist_2.png);
 	background-position: -116px -54px;
 	background-repeat:no-repeat;
 	padding:0 4px 0 25px;
@@ -228,7 +229,7 @@ div.hot_words span,div.hot_words a{
 	width: 40px;
 	height: 40px;
 	margin: 5px 5px 0 55px;
-	background-image: url(Images/iconlist_2.png);
+	background-image: url(../Images/iconlist_2.png);
 	background-repeat: no-repeat;	
 }
 #foot_box ul{
@@ -306,7 +307,7 @@ nav{
 	float: right;
 	width: 20px;
 	height: 20px;
-	background: url(Images/iconlist_2.png) no-repeat -65px 0px;
+	background: url(../Images/iconlist_2.png) no-repeat -65px 0px;
 	margin-top: 10px;
 	margin-right: 15px;
 }
@@ -468,13 +469,13 @@ div.close{
 	border-right: none;
 }
 #slider_box .ad>a{
-	background-image: url(Images/index/ad-arraw.png);
+	background-image: url(../Images/index/ad-arraw.png);
 	background-repeat: no-repeat;
 	width: 25px;
 	height: 35px;
 }
 #slider_box .ad>a:hover{
-	background-image:url(Images/index/ad-arraw-hover.png);
+	background-image:url(../Images/index/ad-arraw-hover.png);
 }
 #slider_box a.preview,#slider_box a.preview:hover{
 	float:left;
@@ -546,21 +547,21 @@ div.close{
 	text-align: center;	
 }
 #virtuals ul li i{
-	background: url(Images/index/virtuals_arraw.gif) no-repeat center center;
+	background: url(../Images/index/virtuals_arraw.gif) no-repeat center center;
 	width: 20px;
 	height: 15px;
 	display: block;
 	margin: 0 auto;
 }
 #virtuals ul .tell_pay s{
-    background: url(Images/index/virtuals-20140606.png) no-repeat;
+    background: url(../Images/index/virtuals-20140606.png) no-repeat;
     width: 40px;
 	height: 40px;
 	display: block;	
 	margin: 11px auto 2px auto;
 }
 #virtuals ul .air_pay s{
-	background: url(Images/index/virtuals-20140606.png) no-repeat 0px -50px;
+	background: url(../Images/index/virtuals-20140606.png) no-repeat 0px -50px;
 	width: 40px;
 	height: 40px;
     display: block;	
@@ -655,7 +656,7 @@ div.close{
 	height: 70px;
 	color: #888;
 	margin-top: 20px;
-	background: url(Images/index/cantuan.png) no-repeat 0px 32px;
+	background: url(../Images/index/cantuan.png) no-repeat 0px 32px;
 }
 #show_box>ul>li>div>div>span{
 	color:#e4393c;
@@ -667,10 +668,10 @@ div.close{
 }
 /*展示项的背景图片*/
 li.pinpaijie{
-	background:url(Images/index/show_01.jpg);
+	background:url(../Images/index/show_01.jpg);
 }
 li.tuangou{
-	background:url(Images/index/show_04.png);
+	background:url(../Images/index/show_04.png);
 }
 /*三幅广告*/
 #three{	
@@ -694,7 +695,7 @@ div.floor>header>span{
 	height: 28px;
 	float: left;
 	color: #fff;
-	background: url(Images/index/index_iconlist_01.png) no-repeat 0px 2px;
+	background: url(../Images/index/index_iconlist_01.png) no-repeat 0px 2px;
 	padding: 4px 2px 6px;
 	font-size: 18px;
 	font-weight: bold;
@@ -735,7 +736,7 @@ div.floor ul.tab li a{
 div.floor ul.tab li a:hover{
 	text-decoration: none;
 	border-bottom-color: #e4393c;
-	background-image: url(Images/index/tab_arraw.png);
+	background-image: url(../Images/index/tab_arraw.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
@@ -751,7 +752,7 @@ div.floor ul.link li{
 	padding-top: 4px;
 	margin-left: 10px;
 	padding-right: 15px;
-	background: url(Images/index/link_arraw.png) no-repeat right 4px;
+	background: url(../Images/index/link_arraw.png) no-repeat right 4px;
 }
 div.floor ul.link li a{
     color: #005EA7;
