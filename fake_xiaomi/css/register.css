@@ -1,0 +1,178 @@
+body{
+	background:#f5f5f5;
+	font-size:12px;
+ 	font-family: arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","微軟正黑體","儷黑 Pro",sans-serif;
+}
+body,html,h1,h2,h3,ul,li,dl,dt,dd,p ,a,span,input,button{
+	margin:0px;
+	padding:0px;
+}
+ul li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+.register{
+	width:856px;
+	height:720px;
+	margin:0 auto;
+}
+/*头部*/
+.register_top{
+	width:856px;
+	min-height:620px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+/*logo&小米账号注册*/
+.register_top .header{
+	width:856px;
+	height: 168px;
+	padding:50px 0 0 0;
+}
+.header .logo{
+	width:856px;
+	height:48px;
+	margin-bottom:20px;
+}
+.header .logo .pic{
+	width:48px;
+	height:48px;
+	margin:0 auto;
+	background:url(../img/login1.jpg);
+}
+.header>span{
+	display: block;
+	width:856px;
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	font-size:30px;
+	color:#424242;
+	margin-bottom:28px;
+}
+.header .count{	
+	width:856px;
+	height:48px;
+    position: relative;	
+}
+.header .count span{
+	position: absolute;
+	right: 248px;
+	top: 10px;	
+	height:48px;
+	font-size: 14px;
+}
+.header .count span a{
+	color: #FF0000;
+}
+/*form*/
+.form{
+	width:360px;
+	height:200px;
+	padding:12px 0;
+	margin:0 auto;	
+}
+.local{
+	width:360px;
+	height:42px;
+	margin-bottom:22px;	
+	padding-left:14px;
+	border:1px solid #e0e0e0;
+	color:#b0b0b0;
+}
+.username{
+	width:328px;
+	height:20px;
+	padding:10px 16px 10px 14px;
+	border:1px solid #e0e0e0;
+	margin-bottom:22px;
+}
+.key{
+	width:360px;
+	height:42px;
+	margin-bottom:40px;
+}
+.passkey{
+	border:1px solid #e0e0e0;
+	width:216px;
+	height:20px;
+	padding-left:14px;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:left;
+}
+.passkey.active{
+	color:red;
+	font-weight:bold;
+}
+.username.active{
+	color:red;
+	font-weight:bold;
+}
+.able-key{
+	width:128px;
+	height:22px;
+	padding:10px 0;
+	background:red;
+	float:left;
+	font-size:18px;
+	color:#fff;
+	text-align:center;
+}
+.form .btn{
+	height:46px;
+	width:360px;
+	background:#ef5b00;
+	color:#fff;
+	text-align: center;
+	font-size:16px;
+	line-height:46px;
+	cursor: pointer;
+	margin-bottom:10px;
+}
+.page span{
+	color:#ccc;
+}
+.page b{
+	color: #333333;
+}
+/*尾部*/
+.staticlink{
+	width:360px;
+	height:16px;
+	text-align:center;
+	margin:0 auto;
+}
+.staticlink a{
+	color:#333;
+	padding:0 5px;
+}
+.staticlink span{
+	padding:0 3px;
+}
+.custum{
+	height:80px;
+	width:100%;	
+}
+.link-area{
+	width:100%;
+	height:18px;
+	line-height:18px;
+	text-align:center;
+}
+.link-area a{
+	padding:0 5px;
+	color:#333;
+	
+}
+.link-area span{
+	padding:0 3px;
+}
+.version{
+	padding-top:20px;
+	height:15px;
+	width:100%;
+	text-align: center;
+}
