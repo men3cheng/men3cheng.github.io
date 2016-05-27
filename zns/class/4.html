@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#div1{
+			width: 150px;
+			height: 200px;
+			border: 1px solid #ccc;
+		}
+	</style>
+	<script type="text/javascript">
+	    //传一个参数；
+		/*function toColor(color) {
+			var odiv=document.getElementById("div1");
+			odiv.style.background=color;
+		}*/
+		//传两个参数；
+		function toAny(name,value) {
+			var odiv=document.getElementById("div1");
+			odiv.style[name]=value;
+		}
+	</script>
+</head>
+<body>
+	<!-- <input type="button" name="btn1" value="变红" onclick="toColor('red');" />
+	<input type="button" name="btn1" value="变蓝" onclick="toColor('blue');" />
+	<input type="button" name="btn1" value="变绿" onclick="toColor('green');" />
+	<div id="div1"></div> -->
+	<input type="button" name="btn1" value="变高" onclick="toAny('height','300px');" />
+	<input type="button" name="btn1" value="变宽" onclick="toAny('width','250px');" />
+	<input type="button" name="btn1" value="变黄" onclick="toAny('background','yellow');" />
+	<div id="div1"></div>
+</body>
+</html>

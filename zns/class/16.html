@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>无缝滚动图</title>
+	<style type="text/css">
+		*{margin: 0px;padding: 0px}
+		#div1{width: 712px;height: 108px;margin:100px auto;position: relative; background: red;overflow: hidden;}
+		#div1 ul{position: absolute;left: 0px;top: 0px}
+		#div1 ul li{float: left;width: 178px;height: 108px;list-style: none;}
+		#div1 ul li img{width: 178px;height: 108px;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var div1=document.getElementById('div1');
+			var ul=div1.getElementsByTagName('ul')[0];
+			var li=ul.getElementsByTagName('li');
+			var speed=null;
+			ul.innerHTML=ul.innerHTML+ul.innerHTML;
+			ul.style.width=li[0].offsetWidth*li.length+'px';
+			function move(){
+				if(ul.offsetLeft<-ul.offsetWidth/2){   //当滚完宽度的一半时；
+					ul.style.left='0'+'px';   
+				}
+				ul.style.left=ul.offsetLeft+speed+'px';  //向左滚动；
+
+				if(ul.offsetLeft>0){
+					ul.style.left=-ul.offsetWidth/2+'px';
+				}
+				ul.style.left=ul.offsetLeft+speed+'px';  //向右滚动；
+			}
+			var timer=setInterval(move,30);
+			div1.onmouseover=function(){
+				clearInterval(timer);
+			}
+			div1.onmouseout=function(){
+				timer=setInterval(move,30);
+			}
+			var left=document.getElementsByTagName('a')[0];
+			var right=document.getElementsByTagName('a')[1];
+			left.onclick=function(){
+				speed=-1;
+			}
+			right.onclick=function(){
+				speed=1;
+			}
+		}
+	</script>
+</head>
+<body>
+	<a href="javascript:;">向左走</a>
+	<a href="javascript:;">向右走</a>
+	<div id="div1">
+		<ul>
+			<li><img src="img/anyang.jpg"></li>
+			<li><img src="img/kobe.jpg"></li>
+			<li><img src="img/kobe1.jpg"></li>
+			<li><img src="img/smallyue.png"></li>
+		</ul>
+	</div>
+</body>
+</html>

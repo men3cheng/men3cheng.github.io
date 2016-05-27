@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var a=document.getElementsByTagName('a');
+			var ul=document.getElementById('ul1');
+			
+			for(var i=0;i<a.length;i++){
+				a[i].onclick=function(){
+					ul.removeChild(this.parentNode);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>我<a href="javascript:;">删除</a></li>
+		<li>她<a href="javascript:;">删除</a></li>
+		<li>嘀<a href="javascript:;">删除</a></li>
+		<li>啊<a href="javascript:;">删除</a></li>
+		<li>嗯<a href="javascript:;">删除</a></li>
+	</ul>
+</body>
+</html>
