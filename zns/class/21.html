@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表格add del</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var tab=document.getElementById('tab1');
+			var btn=document.getElementById('btn1');
+			var name=document.getElementById('name');
+			var age=document.getElementById('age');
+			var id=tab.tBodies[0].rows.length+1;
+			btn.onclick=function()
+			{
+				var tr=document.createElement('tr');
+
+				var td=document.createElement('td');
+				td.innerHTML=id++;
+				tr.appendChild(td);
+
+				var td=document.createElement('td');
+				td.innerHTML=name.value;
+				tr.appendChild(td);
+
+				var td=document.createElement('td');
+				td.innerHTML=age.value;
+				tr.appendChild(td);
+
+				var td=document.createElement('td');
+				td.innerHTML='<a href="javascript:;">删除</a>';
+				tr.appendChild(td);
+
+				td.getElementsByTagName('a')[0].onclick=function(){
+					tab.tBodies[0].removeChild(this.parentNode.parentNode);
+				};
+
+				tab.tBodies[0].appendChild(tr);
+
+			}
+		}
+	</script>
+</head>
+<body>
+	姓名：<input type="text" name="" id="name" />
+	年龄：<input type="text" name="" id="age" />
+	<input type="button" name="" value="添加" id="btn1" />
+	<table id="tab1" border="1" width="500px">
+		<thead>
+			<td>ID</td>
+			<td>姓名</td>
+			<td>年龄</td>
+			<td>操作</td>
+		</thead>		
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>张三</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>李艾</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>王五</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>张六</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>帆帆</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

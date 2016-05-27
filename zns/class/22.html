@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表格search</title>
+	<script type="text/javascript">
+		//实现模糊搜索；
+	    /*
+	    	var str='1245646';
+	   	 	alert(str.search('6'));// 返回4(从第四个位置开始出现)
+	    	alert(str.search('7'));// 返回-1(不存在)
+	    	*/
+	    //实现多重关键字搜索；
+	    /*
+	    	var str='abc 123 qwer';
+	    	var arr=str.split(' '); //中间留空格
+	    	alert(arr); //分成3组
+	    */
+	    window.onload=function(){
+
+	    	var tab=document.getElementById('tab1');
+	    	var btn=document.getElementById('btn1');
+	    	var name=document.getElementById('name');
+
+	    	btn.onclick=function(){
+
+	    		for(var i=0;i<tab.tBodies[0].rows.length;i++){
+
+	    			var stab=tab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase(); //名字的td;
+	    			var sname=name.value.toLowerCase();  //输入框的value;
+	    			var arr=sname.split(' ');
+
+	    			tab.tBodies[0].rows[i].style.background='';
+
+	    			for(var j=0;j<arr.length;j++){
+
+	    				if(stab.search(arr[j])!=-1){
+	    					tab.tBodies[0].rows[i].style.background='yellow';
+	    				}		
+	    			}
+	    		}
+	    	}
+	    }
+	</script>
+	</head>
+	<body>
+		姓名：<input type="text" name="" id="name" />
+		<input type="button" name="" value="search" id="btn1" />
+		<table id="tab1" border="1" width="500px">
+			<thead>
+				<td>ID</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</thead>		
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>张三</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>李艾</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Blue</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>张六</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>帆帆</td>
+					<td>23</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	</html>

@@ -13,23 +13,21 @@
 			//alert(tab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[0].getElementsByTagName('td')[1].innerHTML);
 			//alert(tab.tBodies[0].rows[0].cells[1].innerHTML);
 			//alert(tab.tBodies[0].rows.length);
-		    for(var i=0;i<tab.tBodies[0].rows.length;i++){
-		    	tab.tBodies[0].rows[i].onmouseover=function(){
-		    		oldColor=this.style.background;
-		    		this.style.background="green";
-		    	}
-		    	tab.tBodies[0].rows[i].onmouseout=function(){
-		    		this.style.background=oldColor;
-		    	}
-		    	if(i%2==0){
-		    		tab.tBodies[0].rows[i].style.background='#ccc';
-		    	}else{
+			for(var i=0;i<tab.tBodies[0].rows.length;i++){
+				tab.tBodies[0].rows[i].onmouseover=function(){
+					oldColor=this.style.background;
+					this.style.background="green";
+				}
+				tab.tBodies[0].rows[i].onmouseout=function(){
+					this.style.background=oldColor;
+				}
+				if(i%2==0){
+					tab.tBodies[0].rows[i].style.background='#ccc';
+				}else{
 					tab.tBodies[0].rows[i].style.background='';
-		    	}
-		    }
-
-		}
-		
+				}
+			}
+		}		
 	</script>
 </head>
 <body>

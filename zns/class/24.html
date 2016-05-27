@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表格排序</title>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var btn=document.getElementById('btn1');
+			var tab1=document.getElementById('tab1');
+
+			btn.onclick=function(){
+				var arr=[];
+				for(var i=0;i<tab1.tBodies[0].rows.length;i++)
+				{
+					arr[i]=tab1.tBodies[0].rows[i];
+				};
+
+				arr.sort(function(tr1,tr2){
+					var n1=parseInt(tr1.cells[0].innerHTML);
+					var n2=parseInt(tr2.cells[0].innerHTML);
+					return n1-n2;
+				});
+
+				for(var i=0;i<arr.length;i++)
+				{
+					tab1.tBodies[0].appendChild(arr[i]);
+				};
+			};
+		};
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="排序" id="btn1" />
+	<table id="tab1" border="1" width="500px">
+		<thead>
+			<td>ID</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</thead>		
+		<tbody>
+			<tr>
+				<td>4</td>
+				<td>张三</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>李艾</td>
+				<td>21</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>王五</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>张六</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>帆帆</td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>李名</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
