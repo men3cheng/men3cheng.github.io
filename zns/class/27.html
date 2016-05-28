@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>'分享'侧边栏</title>
+	<style type="text/css">
+		#div1{
+			width: 150px;
+			height: 200px;
+			background-color: #ccc;
+			position: absolute;	
+			left: -150px;		
+		}
+		#div1 span{
+			position: absolute;
+			width: 20px;
+			height: 60px;
+			line-height: 20px;	
+			background-color: red;
+			right: -20px;
+			top: 70px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var div1=document.getElementById('div1');
+			div1.onmouseover=function(){
+				startmove(0);
+			}
+			div1.onmouseout=function(){
+				startmove(-150);
+			}
+		}
+		var timer=null;
+		function startmove(iTarget)
+		{
+			var div1=document.getElementById('div1');
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var speed=0;
+				if(div1.offsetLeft<iTarget)
+				{
+					speed=10;
+				}else{
+					speed=-10;
+				}
+				if(div1.offsetLeft==iTarget)
+				{
+					clearInterval(timer);
+				}else{
+					div1.style.left=div1.offsetLeft+speed+'px';
+				}
+			},30);
+		}
+	
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<span>分享到</span>
+	</div>
+</body>
+</html>

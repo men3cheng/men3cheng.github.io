@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>图片的淡入淡出</title>
+	<style type="text/css">
+		#div1{width: 200px;height: 200px;background: red;filter:alpha(opacity:30); opacity:0.3;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var div=document.getElementById('div1');
+			div.onmouseover=function(){
+				startmove(100);
+			}
+			div.onmouseout=function(){
+				startmove(30);
+			}
+		}
+
+		var alpha=30;
+		var timer=null;
+		function startmove(iTarget)
+		{
+			var div=document.getElementById('div1');
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var speed=0;
+				if(alpha<iTarget){
+					speed=10;
+				}else{
+					speed=-10;
+				}
+
+				if(alpha==iTarget){
+					clearInterval(timer);
+				}else{
+					alpha+=speed;
+					div1.style.filter='alpha(opacity:'+alpha+')';
+					div1.style.opacity=alpha/100;
+				}
+			},30)
+		}
+
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

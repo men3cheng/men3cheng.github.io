@@ -10,18 +10,19 @@
 			var tab1=document.getElementById('tab1');
 
 			btn.onclick=function(){
-				var arr=[];
-				for(var i=0;i<tab1.tBodies[0].rows.length;i++)
+				//把tr存入数组；
+				var arr=[];				
+				for(var i=0;i<tab1.tBodies[0].rows.length;i++) 
 				{
 					arr[i]=tab1.tBodies[0].rows[i];
 				};
-
-				arr.sort(function(tr1,tr2){
+				//做排序；
+				arr.sort(function(tr1,tr2){     
 					var n1=parseInt(tr1.cells[0].innerHTML);
 					var n2=parseInt(tr2.cells[0].innerHTML);
 					return n1-n2;
 				});
-
+				//追加到父节点；
 				for(var i=0;i<arr.length;i++)
 				{
 					tab1.tBodies[0].appendChild(arr[i]);

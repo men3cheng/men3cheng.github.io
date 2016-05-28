@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>缓冲运动</title>
+	<style type="text/css">
+		#div1{width: 100px;height: 100px;position: absolute;background: red;top:50px;left: 10px;}
+		#div2{width: 1px;height: 200px;position: absolute;background: black;top:0px;left: 300px}
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{			
+			var btn=document.getElementById('btn');
+			btn.onclick=function(){
+				var div1=document.getElementById('div1');
+				setInterval(function(){
+					var speed=(300-div1.offsetLeft)/10;
+					//speed=Math.ceil(speed);
+					//speed=Math.floor(speed);
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);
+					div1.style.left=div1.offsetLeft+speed+'px';
+					document.title=div1.offsetLeft+','+speed;
+				},30);				
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="缓冲运动" id="btn" /> 
+	<div id="div1"></div>
+	<div id="div2"></div>
+</body>
+</html>

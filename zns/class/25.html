@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>setTimeout setInterval区别</title>
+	<script type="text/javascript">
+		/*PerRefresh();
+		function PerRefresh() {
+			var today = new Date();
+			alert("The time is: " + today.toString());
+			setTimeout("showTime()", 5000);
+		}*/
+
+		setInterval("PerRefresh()", 5000);
+		function PerRefresh() {
+			var today = new Date();
+			alert("The time is: " + today.toString());
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
