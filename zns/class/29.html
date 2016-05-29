@@ -4,30 +4,57 @@
 	<meta charset="utf-8">
 	<title>缓冲运动</title>
 	<style type="text/css">
-		#div1{width: 100px;height: 100px;position: absolute;background: red;top:50px;left: 10px;}
-		#div2{width: 1px;height: 200px;position: absolute;background: black;top:0px;left: 300px}
+		#div1{width: 100px;height: 100px;position: absolute;background: red;top:50px;left: 600px;}
+		#div2{width: 1px;height: 200px;position: absolute;background: black;top:0px;left: 100px}
+		#div3{width: 1px;height: 200px;position: absolute;background: black;top:0px;left: 300px}
 	</style>
 	<script type="text/javascript">
 		window.onload=function()
 		{			
-			var btn=document.getElementById('btn');
-			btn.onclick=function(){
-				var div1=document.getElementById('div1');
-				setInterval(function(){
-					var speed=(300-div1.offsetLeft)/10;
-					//speed=Math.ceil(speed);
-					//speed=Math.floor(speed);
-					speed=speed>0?Math.ceil(speed):Math.floor(speed);
-					div1.style.left=div1.offsetLeft+speed+'px';
-					document.title=div1.offsetLeft+','+speed;
-				},30);				
+			var btn1=document.getElementById('btn1');
+			var btn2=document.getElementById('btn2');	
+			btn1.onclick=function(){
+				startmove(100);
 			}
+			btn2.onclick=function(){
+				startmove(300);
+			}
+		}
+		var timer=null;
+		function startmove(iTarget){			
+			var div1=document.getElementById('div1');
+			clearInterval(timer);			
+			timer=setInterval(function(){
+				//var speed=(300-div1.offsetLeft)/10;
+				//speed=Math.ceil(speed);
+				//speed=Math.floor(speed);
+				var speed=0;
+				if(div1.offsetLeft<iTarget){
+					speed=7;
+				}else{
+					speed=-7;
+				}
+				//speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				if(Math.abs(iTarget-div1.offsetLeft)<=7)
+				{
+					clearInterval(timer);
+					div1.style.left=iTarget+'px';
+				}else{
+					div1.style.left=div1.offsetLeft+speed+'px';
+				document.title=div1.offsetLeft+','+speed;
+				}
+				
+			},30);				
 		}
 	</script>
 </head>
 <body>
-	<input type="button" value="缓冲运动" id="btn" /> 
+	<input type="button" value="到100" id="btn1" /> 
+	<br/>
+	<br/>
+	<input type="button" value="到300" id="btn2" /> 
 	<div id="div1"></div>
 	<div id="div2"></div>
+	<div id="div3"></div>
 </body>
 </html>
