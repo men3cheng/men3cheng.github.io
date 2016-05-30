@@ -10,19 +10,11 @@
 	<script type="text/javascript">
 		window.onload=function(){
 			var div1=document.getElementById('div1');
-			div1.onmouseover=function(){
-				startMove(div1,'width',300,function(){
-					startMove(div1,'height',300,function(){
-						startMove(div1,'opacity',100);
-					});
-				});
+			div1.onmouseover=function(){				
+				startMove(div1,{width:300,height:300,opacity:100})
 			}
-			div1.onmouseout=function(){					
-				startMove(div1,'opacity',30,function(){
-					startMove(div1,'height',100,function(){
-						startMove(div1,'width',100);
-					});
-				});				
+			div1.onmouseout=function(){	
+				startMove(div1,{width:100,height:100,opacity:30})		
 			}
 		}
 	</script>
