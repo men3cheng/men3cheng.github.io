@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>跟着鼠标走的一大串div</title>
+	<style type="text/css">
+		div{width: 10px;height: 10px;background: red;position: absolute;}
+	</style>
+	<script type="text/javascript">
+		function getPos(ev){
+			var  scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+			var  scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			return{x:ev.clientX+scrollLeft,y:ev.clientY+scrollTop};
+		}
+		document.onmousemove=function(ev){
+			var div=document.getElementsByTagName('div');
+			var oEvent=ev||event;
+			var pos=getPos(oEvent);
+			for(var i=div.length-1;i>0;i--){
+				div[i].style.left=div[i-1].offsetLeft+'px';
+				div[i].style.top=div[i-1].offsetTop+'px';
+			}
+			div[0].style.left=pos.x+'px';
+			div[0].style.top=pos.y+'px';
+		}
+	</script>
+</head>
+<body>
+	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>
+	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>
+	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>
+	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>	<div></div>
+	<div></div>	<div></div>	<div></div>	<div></div> <div></div>	<div></div>	<div></div>	<div></div>
+</body>
+</html>

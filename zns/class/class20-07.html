@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>crtl+enter</title>
+	<style type="text/css"></style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var txt1=document.getElementById('txt1');
+			var txt2=document.getElementById('txt2');
+			//var btn1=document.getElementById('btn1');
+			/*btn1.onclick=function(){
+				txt2.value=txt1.value+'\n';
+				txt1.value='';
+			}*/
+			txt1.onkeydown=function(ev){
+				var oEvent=ev||event;
+				if(oEvent.keyCode==13 && oEvent.ctrlKey)
+				{
+					txt2.value+=txt1.value+'\n';
+					txt1.value='';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="txt1" name="" id="txt1" /><br/>
+	<!-- <input type="button" name="" value="提交" id="btn1" /> -->	
+	<textarea id="txt2" cols="40" rows="10"></textarea>
+</body>
+</html>
