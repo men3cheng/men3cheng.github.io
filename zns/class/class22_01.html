@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>事件绑定</title>
+	<script type="text/javascript">
+		function myAddEvent(obj,ev,fn)
+		{
+			if(obj.attachEvent)
+			{
+				obj.attachEvent('on'+ev,fn);
+			}else{
+				obj.addEventListener(ev,fn,false);
+			}
+		}
+		window.onload=function(){
+			var btn=document.getElementById('btn1');
+			myAddEvent(btn,'click',function(){
+				alert('a');
+			})
+			myAddEvent(btn,'click',function(){
+				alert('b');
+			})
+			/*if(btn.attachEvent)
+			{
+				//(chrome不识别)attachEvent(事件名，函数)
+				btn.attachEvent('onclick',function()
+				{
+					alert('a');
+				});
+				btn.attachEvent('onclick',function()
+				{
+					alert('b');
+				});	
+			}else{
+				//addEventListener(事件名，函数,false)
+				btn.addEventListener('click',function(){
+					alert('a');
+				},false);
+				btn.addEventListener('click',function(){
+					alert('b');
+				},false);
+			}	*/
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="点击" id="btn1" />
+</body>
+</html>

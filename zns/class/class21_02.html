@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>只能输入数字的文本框(win10自带的输入法禁不掉)</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var txt1=document.getElementById('txt1');
+			txt1.onkeydown=function(ev){
+				var oEvent=ev||event;
+				//0-   48
+				//9-   57
+				//如果用户按的不是退格并且也不是数字；
+				if(oEvent.keyCode!=8 && (oEvent.keyCode<48||oEvent.keyCode>57)){
+					return false;
+				}					
+			}
+		}	
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="txt1" />
+</body>
+</html> 

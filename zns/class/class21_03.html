@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>完美拖拽</title>
+	<style type="text/css">
+		#div1{width: 200px;height: 200px;position: absolute;background: yellowgreen;line-height: 200px;text-align: center;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var div1=document.getElementById('div1');
+			var disX=0;
+			var disY=0;
+			div1.onmousedown=function(ev)
+			{
+				var oEvent=ev||event;
+				disX=oEvent.clientX-div1.offsetLeft;
+				disY=oEvent.clientY-div1.offsetTop;
+
+				function mouseMove(ev)
+					{
+						var oEvent=ev||event;
+						var left=oEvent.clientX-disX;
+						var top=oEvent.clientY-disY;
+						var right=document.documentElement.clientWidth-div1.offsetWidth;
+						var bottom=document.documentElement.clientHeight-div1.offsetHeight;	
+						//拖拽--吸附
+						/*if(left<50){
+							left=0;
+						}else if(left>right){
+							left=right;
+						}*/
+						if(left<0){
+							left=0;
+						}else if(left>right){
+							left=right;
+						}
+
+						if(top<0){
+							top=0;
+						}else if(top>bottom){
+							top=bottom;
+						}
+						div1.style.left=left+'px';
+						div1.style.top=top+'px';
+					}
+					function mouseUp()
+					{
+						this.onmousemove=null;
+						this.onmouseup=null;
+						if(div1.releaseCapture){
+							div1.releaseCapture();
+						}						
+					}
+				if(div1.setCapture)
+				{
+					div1.onmousemove=moveMouse;
+					div1.onmouseup=mouseUp;
+					div1.setCapture();					
+				}else{
+					document.onmousemove=mouseMove;
+					document.onmouseup=mouseUp;
+				}			
+			}			
+		}
+</script>
+</head>
+<body>
+	ertretetetetetetetet<br>
+	ertretetetetetetetet<br>
+	ertretetetetetetetet<br>
+	ertretetetetetetetet<br>
+	ertretetetetetetetet<br>
+
+	<div id="div1">拖拽我</div>
+</body>
+</html>
