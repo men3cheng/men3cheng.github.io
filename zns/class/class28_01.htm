@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>面向过程的选项卡</title>
+	<style type="text/css">
+		#div1 input{background: white;}
+		#div1 input.active{background: yellow;}
+		#div1 div{width: 150px;height: 100px;background: #ccc;display: none;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var div1=document.getElementById('div1');
+			var input=div1.getElementsByTagName('input');
+			var div=div1.getElementsByTagName('div');
+			for(var i=0;i<input.length;i++){
+				input[i].index=i;
+				input[i].onclick=function(){
+					for(var i=0;i<input.length;i++){
+						input[i].className='';
+						div[i].style.display='none';
+					}
+					this.className='active';
+					div[this.index].style.display='block';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<input class="active" type="button" value="a" />
+		<input type="button" name="" value="b" />
+		<input type="button" name="" value="c" />
+		<div style="display:block;">dgdgdfg</div>
+		<div>fgdgjyu</div>
+		<div>qwertty</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>面向对象的选项卡</title>
+	<style type="text/css">
+		#div1 input{background: white;}
+		#div1 input.active{background: yellow;}
+		#div1 div{width: 150px;height: 100px;background: #ccc;display: none;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			new TabSwitch('div1');
+		}		
+		function TabSwitch(id){
+			var _this=this;
+			var div1=document.getElementById(id);
+			this.input=div1.getElementsByTagName('input');
+			this.div=div1.getElementsByTagName('div');
+			for(var i=0;i<this.input.length;i++){
+				this.input[i].index=i;
+				this.input[i].onclick=function(){
+					_this.fnClick(this);
+				}
+			}
+		}
+		TabSwitch.prototype.fnClick=function(input){		
+			//alert(this);
+			for(var i=0;i<this.input.length;i++){
+				this.input[i].className='';
+				this.div[i].style.display='none';
+			}
+			input.className='active';
+			this.div[input.index].style.display='block';
+		}		
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<input class="active" type="button" value="a" />
+		<input type="button" name="" value="b" />
+		<input type="button" name="" value="c" />
+		<div style="display:block;">dgdgdfg</div>
+		<div>fgdgjyu</div>
+		<div>qwertty</div>
+	</div>
+</body>
+</html>

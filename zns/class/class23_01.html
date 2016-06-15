@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>带框拖拽</title>
+	<style type="text/css">
+		#div1{width: 150px;height: 150px;position: absolute;background: yellowgreen;line-height: 150px;text-align: center;}
+		#div2{width:800px;height: 600px;position: absolute;background: #ccc;}
+		.box{border: 1px dashed black;position:absolute;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var div1=document.getElementById('div1');
+			var div2=document.getElementById('div2');
+			var disX=0;
+			var disY=0;
+			div1.onmousedown=function(ev)
+			{
+				var oEvent=ev||event;
+				disX=oEvent.clientX-div1.offsetLeft;
+				disY=oEvent.clientY-div1.offsetTop;
+
+				var box=document.createElement('div');
+				box.className='box';
+				box.style.width=div1.offsetWidth+2+'px';
+				box.style.height=div1.offsetHeight+2+'px';
+				box.style.left=div1.offsetLeft+6+'px';
+				box.style.top=div1.offsetTop+6+'px';
+
+				document.body.appendChild(box);
+
+				document.onmousemove=function(ev)
+				{
+					var oEvent=ev||event;
+					var left=oEvent.clientX-disX;
+					var top=oEvent.clientY-disY;
+					var right=div2.offsetWidth-div1.offsetWidth;
+					var bottom=div2.offsetHeight-div1.offsetHeight;	
+
+					//拖拽--吸附
+					/*if(left<50){
+						left=0;
+					}else if(left>right){
+						left=right;
+					}*/						
+					if(left<0){
+						left=0;
+					}else if(left>right){
+						left=right;
+					}
+
+					if(top<0){
+						top=0;
+					}else if(top>bottom){
+						top=bottom;
+					}
+					box.style.left=left+'px';
+					box.style.top=top+'px';
+				}
+				document.onmouseup=function()
+				{
+					document.onmousemove=null;
+					document.onmouseup=null;
+
+					div1.style.left=box.offsetLeft+'px';
+					div1.style.top=box.offsetTop+'px';
+
+					document.body.removeChild(box);
+				}
+				
+				return false;//阻止默认事件(chrome ff iE9)
+			}			
+		}
+	</script>
+</head>
+<body>
+	<div id="div2">
+		<div id="div1">拖拽我</div>
+	</div>	
+</body>
+</html>
