@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>右下角悬浮框</title>
+	<style type="text/css">
+		#div1{width: 200px;height: 200px;background: red;position: absolute;right: 0;bottom: 0;}
+		body{height: 2000px;}
+	</style>
+	<script type="text/javascript">
+		/*window.onload=function(){
+			alert(window.navigator.userAgent);  //判断浏览器和设备的类型
+		}*/
+		window.onscroll=window.onresize=function(){
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			var div1=document.getElementById('div1');
+			div1.style.top=document.documentElement.clientHeight-div1.offsetHeight+scrollTop+'px';
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
