@@ -5,6 +5,7 @@ import org.junit.Test;
 import cn.crxy.spider.domain.Page;
 import cn.crxy.spider.download.HttpclientDownloadImpl;
 import cn.crxy.spider.process.JdProcessImpl;
+import cn.crxy.spider.store.ConsoleStoreImpl;
 import cn.crxy.spider.store.MySqlStoreImpl;
 
 public class Spider_Test {
@@ -16,10 +17,12 @@ public class Spider_Test {
 		Spider spider = new Spider();
 		spider.setDownloadable(new HttpclientDownloadImpl());
 		spider.setProcessable(new JdProcessImpl());
+		spider.setStoreable(new ConsoleStoreImpl());
 		spider.setStoreable(new MySqlStoreImpl());
+		
 		Page page = spider.download(url);
 		//System.out.println(page.getContent());
 		spider.process(page);
-		//spider.store(page);
+		spider.store(page);
 	}
 }

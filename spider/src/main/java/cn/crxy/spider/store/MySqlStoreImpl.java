@@ -35,6 +35,7 @@ public class MySqlStoreImpl implements Storeable {
 		String current_time = MyDateUtils.formatDate2(new Date());
 		//goods_id,data_url,pic_url,title,price,param,`current_time`
 		MyDbUtils.update(MyDbUtils.INSERT_LOG, goodsId,data_url,pic_url,title,price,param,current_time);
+		
 	}
 
 }

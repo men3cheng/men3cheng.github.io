@@ -73,9 +73,8 @@ public class Page {
 		this.values.put(key, values);
 	}
 	
-	public void addNextUrls(String url){
+	public void addNextUrl(String url){
 		this.urls.add(url);
 	}
-	
 	
 }

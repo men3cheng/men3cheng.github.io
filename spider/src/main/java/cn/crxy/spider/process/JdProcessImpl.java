@@ -3,9 +3,6 @@ package cn.crxy.spider.process;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.swing.text.html.HTML.Tag;
-
 import org.htmlcleaner.HtmlCleaner;
 import org.htmlcleaner.TagNode;
 import org.htmlcleaner.XPatherException;
@@ -34,7 +31,7 @@ public class JdProcessImpl implements Processable {
 				Object[] li_objs = rootNode.evaluateXPath("//*[@id=\"plist\"]/ul/li[1]/div/div[1]/a");
 				for (Object object : li_objs) {
 					TagNode aNode = (TagNode)object;
-					page.addNextUrls(aNode.getAttributeByName("href"));
+					page.addNextUrl("http:"+aNode.getAttributeByName("href"));
 				}
 				//获取下一页的url
 				// //*[@id="J_topPage"]/a[2]
@@ -45,7 +42,7 @@ public class JdProcessImpl implements Processable {
 					//因为最后一页是href="javascript:;&ms=5"，所以做出下面判断
 					//nextUrl.equals("javascript:;") 这样写，如果nexturl为null，那么会报空指针异常
 					if(!"javascript:;".equals(nextUrl)){
-						page.addNextUrls(nextUrl);
+						page.addNextUrl("http://list.jd.com"+nextNode.getAttributeByName("href"));
 					}
 				}
 			}
@@ -93,13 +90,14 @@ public class JdProcessImpl implements Processable {
 		String goodsId = null;
 		if(matcher.find()){
 			//得到第一组匹配--也就是([0-9]+)
-			goodsId = matcher.group(1);
+			goodsId = matcher.group(1);			
 			//System.out.println("商品ID:"+goodsId);
 			page.setGoodsId(goodsId);
 		}
-		String content = PageUtils.getContent("http://p.3.cn/prices/mgets?pduid="+(random.nextInt(100000))+"&skuIds=J_"+goodsId);
+		String content = PageUtils.getContent("http://p.3.cn/prices/mgets?pduid="+random.nextInt(10000)+"&skuIds=J_"+goodsId);
 		//jQuery2210209([{"id":"J_2782640","p":"2499.00","m":"6666.00"}]);
 		JSONArray jsonArray = new JSONArray(content);
+		//[{},{},{}] getJSONObject(0)表示第一个{}
 		JSONObject jsonObject = jsonArray.getJSONObject(0);//{"id":"J_2782640","p":"2499.00","m":"6666.00"}
 		//System.out.println("商品价格:"+jsonObject.getString("p"));
 		return jsonObject.getString("p");//"p":"2499.00"

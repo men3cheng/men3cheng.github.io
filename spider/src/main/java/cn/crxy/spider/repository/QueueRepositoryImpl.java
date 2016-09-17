@@ -1,15 +1,15 @@
 package cn.crxy.spider.repository;
 
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class QueueRepositoryImpl implements Repository{
 
-	private Queue<String> queue = new ConcurrentLinkedDeque<String>();
-	
 	/**
-	 * 先进先出队列
+	 * 模拟本地url仓库
 	 */
+	private Queue<String> queue = new ConcurrentLinkedQueue<String>();
+	
 	@Override
 	public String poll() {
 		return queue.poll();
@@ -21,7 +21,7 @@ public class QueueRepositoryImpl implements Repository{
 	}
 
 	@Override
-	public void addHigh(String nextUrl) {
+	public void addHeight(String nextUrl) {
 		this.add(nextUrl);
 	}
 

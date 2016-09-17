@@ -10,14 +10,14 @@ import java.util.List;
 import org.apache.commons.dbutils.BasicRowProcessor;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayListHandler;
-
-public final class MyDbUtils {// 拒绝继承
+//拒绝继承
+public final class MyDbUtils {
 	private static String className = "com.mysql.jdbc.Driver";
-	private static String url = "jdbc:mysql://localhost:3306/db_test2?useUnicode=true&characterEncoding=utf-8";
+	private static String url = "jdbc:mysql://localhost:3306/da_test01?useUnicode=true&characterEncoding=utf-8";
 	private static String user = "root";
 	private static String password = "root";
 	private static QueryRunner queryRunner = new QueryRunner();
-	public static final String INSERT_LOG = "INSERT INTO SPIDER(goods_id,data_url,pic_url,title,price,param,`current_time`) VALUES(?,?,?,?,?,?,?)";
+	public static final String INSERT_LOG = "insert into spider(goods_id,data_url,pic_url,title,price,param,`current_time`) VALUES(?,?,?,?,?,?,?)";
 
 	// 拒绝new一个实例
 	private MyDbUtils() {
