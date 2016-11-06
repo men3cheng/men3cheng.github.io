@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container" id="cv">
+        <div class="side">
+            <div class="me">
+                <div class="portrait"></div>
+                <div class="remodal remodal-img" data-remodal-id="portrait-modal">
+                    <h3>请输入图片URL地址：</h3>
+                    <br/>
+                    <input type="text" id="avatar-url">
+                    <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+                </div>
+                <h1 id="username" >men3cheng</h1>
+                <h4 id="persona-tag" >Hadoop / Spark</h4>
+            </div>
+            <div class="profile info-unit">
+                <h2 class="info-header"><i class="iconfont icon-person"></i> <span class="info-title">基本信息</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">姓名</label><span class="label-value">门三成</span></li>
+                    <li>
+                        <label class="left-label">学历</label><span class="label-value">本科</span></li>
+                    <li>
+                        <label class="left-label">毕业院校</label><span class="label-value">安阳工学院</span></li>                    
+                    <li>
+                        <label class="left-label">毕业年份</label><span class="label-value">2016</span></li>
+                </ul>
+            </div>
+            <div class="contact info-unit">
+                <h2 class="info-header"><i class="iconfont icon-call"></i> <span class="info-title">联系方式</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">手机</label><span class="label-value">177xxxxx485</span></li>
+                    <li>
+                        <label class="left-label">邮箱</label><span class="label-value">men3chenggoodman@gmail.com</span></li>                    
+                    <li>
+                        <label class="left-label">Github</label><span class="label-value">github.com/men3cheng</span></li>
+                </ul>
+            </div>
+<!--             <div class="skill info-unit">
+                <h2 class="info-header"><i class="iconfont icon-star"></i> <span class="info-title">技能点</span></h2>
+                <hr>
+                <ul class="progress-list">
+                    <li>
+                        <label class="left-label">PHP</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">html/css</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">Javascript</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="stack info-unit">
+                <h2 class="info-header"><i class="iconfont icon-build"></i> <span class="info-title">技术栈</span></h2>
+                <hr>
+                <ul class="stack-list">
+                	<li>
+                        <label class="left-label">大数据</label><span class="label-value">MR、Flume、Kafka、Hbase、Hive、Storm、Spark、Redis、Oozie、Zookeeper、ElasticSearch</span></li>
+                   </li>                    
+                    <li>
+                        <label class="left-label">后端</label><span class="label-value">Java、Scala、MySQL、Redis、SSH</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">前端</label><span class="label-value">H5、jQuery、Bootstrap</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">其它</label><span class="label-value">Shell、Git</span></li>
+                    </li>     
+                </ul>
+            </div>
+
+            <div class="code info-unit">
+                <h2 class="info-header"><i class="iconfont icon-weixin"></i> <span class="info-title">个人微信</span></h2>
+                <hr>
+                <div class="weixin">
+                    <img src="img/weChat.png" alt="">
+
+                </div>
+            </div>
+            <div class="remodal remodal-img" data-remodal-id="weixin-modal">
+                <h3>请输入图片URL地址：</h3>
+                <br/>
+                <input type="text" id="weixin-url">
+                <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="education info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-education"></i> <span class="info-title">教育及工作经历</span></h2>
+                <hr>
+                <ul class="experience-list">                   
+                	<li>
+                        <h3>2012.09-2016.07 安阳工学院 | 计算机科学与信息工程学院</h3>
+                    </li>
+                    <li>
+                        <h3>2015.09-2016.10 上海牛娃互联网金融信息服务有限公司</h3>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="work info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-work"></i> <span class="info-title">XXX团队经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>....</h3>
+                        <p>...</p>
+                        <p>...</p>
+                        <p>....</p>
+                        <p>....</p>
+                    </li>
+                </ul>
+            </div>-->
+            <div class="project info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-project"></i> <span class="info-title">任职期间参与项目</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>信标实时推荐系统</h3>
+                        <p>爱牛娃是牛娃金服旗下收益稳健、风控严谨的投资平台。主要用于解决企业或个人的短期融资难，同时给投资人提供一个短期理财的通道。集群规模为线上50台，测试集群5台，均使用Cloudera公司的CDH + CM进行搭建，每天处理的原始数据量在5T左右。</p>
+                        <br/>                        
+                        <p>根据用户每天产生的数据进行汇总,跟我们每天上的新标进行匹配,匹配成功后,给用户发送相应的推荐消息,使用的集群环境是CentOS6.5 + Jdk7。</p>
+                        <br/>    
+                        <p>集群环境: Flume + Kafka + Storm + Oracle + Web</p>
+                        <br/>  
+                        <p>责任描述:1.负责数据采集层的集群开发和ZooKeeper框架的搭建；2.参与Kafka消费者到Storm层的代码编写；3.参与平台任务调度的开发。</p>
+                    </li>
+                    <li>
+                        <h3>APP数据分析平台</h3>
+                        <p>牛呗是公司推出的专注于为用户提供快速借款、全生活场景的消费分期，安全的投资服务的APP。借贷分期分为教育培训分期、旅游分期、创业分期、租房分期、购物分期等形式。</p>
+                        <br/>
+                        <p>
+                           	该项目主要是对服务器产生的日志数据的采集，经过一系列的处理完成一些指标的缠身，以供策略分析人员使用。具体实现是使用Flume收集数据到集群的HDFS中。通过编写MR代码对HDFS中的数据按照指标要求进行数据仓库的入库，通过Impala框架将Hive中的数据加载进来，通过连接Web将指标数据展示出来。
+                        </p>
+                        </br>
+                        <p>集群环境: Flume + HDFS + Hive + Impala + Web</p>
+                       </br>
+                       <p>责任描述：1.负责Flume、ZooKeeper框架的搭建，使用Flume对交易所推过来的高频交易数据进行收集，并生产到Kafka集群；2.参与编写MR代码入库数据仓库的开发；3.参与数据表加载数据到Impala的开发。</p>
+                   </li>                    
+                </ul>
+            </div>
+            <div class="project info-unit right-list">
+                <h2 class="info-header"><i class="iconfont icon-project"></i> <span class="info-title">个人项目</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>垂直爬虫(JD)</h3>
+                        <p>爬取京东网站的手机页面的所有信息，存入mysql中，以供后期调用。</p>
+                        <br/>                        
+                        <p>使用Httpclient工具模拟浏览器进行页面下载；使用htmlcleaner+xpath对关键性数据进行解析提取；由于需要循环抓取网站中指定分类或者是所有的数据，所以需要把分页的url和商品的url临时存储到一个队列中，这样可以实现一个循环抓取。这个url数据相对比较少，并且增删频繁，所以存储到redis的list队列中，最终都存储至Mysql中。</p>
+                        <br/>                        
+                    </li> 
+                    <li>
+                        <h3>仿小米官网(http://men3cheng.github.io/fake_xiaomi/index.html)</h3>
+                        <p>仿照小米官网，采用H5+css+Javacript做的一个前端项目。</p>
+                        <br/>                        
+                        <p>包含首页，登录页面和注册页面。</p>
+                        <br/>                        
+                    </li>                        
+                </ul>
+            </div>
+            <!--<div class="trophy info-unit">
+                <h2 class="info-header"><i class="iconfont icon-trophy"></i> <span class="info-title">奖项与证书</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>........</h3>
+                        <p>........</p>
+                    </li> 
+                </ul>
+            </div>-->
+            <div class="aboutme info-unit right-paragraph">
+                <h2 class="info-header"><i class="iconfont icon-flower"></i> <span class="info-title">自我评价</span></h2>
+                <hr>
+                <p>
+                <ul class="experience-list">
+                <li>
+                    <p>
+                  乐于与用户以及同事和领导沟通，以便快速解决项目遇到的问题。
+                    </p>
+                </li> 
+                <li>
+                    <p>
+                  做事稳重细心，不缺乏干劲。
+                    </p>
+                </li> 
+                <li>
+                    <p>
+                    	永远对新技术保持热忱，喜欢通过Google解决问题时的感觉。                   		
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    	烹饪、读书、电影是生活的调味品，也是必需品。              		
+                    </p>
+                </li>      
+                <li>
+                    <p>
+                    	感谢您花时间阅读我的简历，期待能有机会和您共事。              		
+                    </p>
+                </li>           
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
